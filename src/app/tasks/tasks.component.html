@@ -1,0 +1,49 @@
+
+<div class="container">
+  <div class="row py-5">
+    <div class="d-flex justify-content-between">
+      <h3>Tasks</h3>
+      <div style="width: 5%;" class="d-flex justify-content-between">
+        <i style="cursor: pointer;" class="fa-solid fa-bug" (click)="goToPokemon()"></i>
+        <i style="cursor: pointer;" class="fa-solid fa-right-from-bracket" (click)="logout()"></i>
+      </div>
+    </div>
+    
+    <button type="button" class="btn btn-indigo" (click)="openModal()">
+      Add Task
+    </button>
+    <ul class="list-group mt-3">
+      <li class="list-group-item" *ngFor="let task of tasks">
+        <h5>{{task.title}}</h5>
+        <p>{{task.description}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div *ngIf="showModal" class="modal show d-block" id="taskModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="taskModalLabel">New Task</h5>
+        <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" formControlName="description"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

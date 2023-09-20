@@ -1,0 +1,14 @@
+.white-text {
+    color: white;
+}
+
+.toast {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 1;
+}
+
+.toast:not(.show) {
+    display: none;
+}

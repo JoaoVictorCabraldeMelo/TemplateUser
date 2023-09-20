@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f8fafb;
+}
+
+p {
+  color: #b3b3b3;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.btn-indigo {
+  background-color: #6610f2;
+  border-color: #e0cffc;
+  color: #ffffff;
+}
+
+.btn-indigo:hover {
+  background-color: #7748f8;
+  border-color: #e8d7fd;
+  color: #f2f2f2;
+}
